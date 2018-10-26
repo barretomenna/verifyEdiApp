@@ -1,0 +1,10 @@
+@import '../../../../styles.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  height: 100%;
+  background-color: $titleBarColor;
+  border-right: 2px solid black;
+}

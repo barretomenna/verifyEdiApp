@@ -1,0 +1,27 @@
+@import '../../../../../styles.scss';
+
+$activeColor: #D84315;
+$paddingTop: 6px;
+
+.container {
+  display: flex;
+  padding: $paddingTop 15px $paddingTop 3px;
+  font-size: 18px;
+  border-bottom: 2px solid black;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  user-select: none;
+
+  &:hover {
+    background: white;
+    color: $titleBarColor;
+    transition: .3s;
+    cursor: pointer;
+  }
+
+  &:active {
+    color: black;
+    background: $activeColor;
+  }
+}
