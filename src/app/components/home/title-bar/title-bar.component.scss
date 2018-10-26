@@ -1,6 +1,6 @@
 @import '../../../../styles.scss';
 
-.container {
+.main-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -11,4 +11,5 @@
   color: white;
   font-weight: bold;
   border-bottom: 2px solid black;
+  border-top: 2px solid #00BCD4;
 }

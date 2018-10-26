@@ -1,0 +1,25 @@
+.main-container {
+  display: flex;
+  flex-direction: column;
+  width: 90vw;
+  min-width: 600px;
+  margin-left: 5px;
+  padding: 0 5px;
+
+  .formulario {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+
+    .item-container {
+      display: flex;
+      flex-direction: column;
+      margin-right: 10px;
+    }
+
+    .button {
+      height: 38px;
+      width: 120px;
+    }
+  }
+}

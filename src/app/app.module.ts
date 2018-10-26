@@ -22,6 +22,8 @@ import { HomeComponent } from './components/home/home.component';
 import { TitleBarComponent } from './components/home/title-bar/title-bar.component';
 import { NavbarComponent } from './components/home/navbar/navbar.component';
 import { NavItemComponent } from './components/home/navbar/nav-item/nav-item.component';
+import { LogComponent } from './components/home/log/log.component';
+import { ListarlogComponent } from './components/home/log/listarlog/listarlog.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -35,7 +37,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     WebviewDirective,
     TitleBarComponent,
     NavbarComponent,
-    NavItemComponent
+    NavItemComponent,
+    LogComponent,
+    ListarlogComponent
   ],
   imports: [
     BrowserModule,
