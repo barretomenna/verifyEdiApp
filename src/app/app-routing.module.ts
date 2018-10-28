@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { HomeComponent } from './components/home/home.component';
 import { LogComponent } from './components/home/log/log.component';
+import { EdiComponent } from './components/home/edi/edi.component';
 
 const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -10,7 +11,10 @@ const routes: Routes = [
         path: 'home',
         component: HomeComponent,
         children: [
-            { path: '', component: LogComponent },
+            { path: 'edi', component: EdiComponent },
+            { path: 'log', component: LogComponent },
+            { path: '', redirectTo: 'edi', pathMatch: 'full' },
+            { path: '**', redirectTo: 'edi', pathMatch: 'full' }
         ]
     }
 ];

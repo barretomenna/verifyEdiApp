@@ -24,6 +24,8 @@ import { NavbarComponent } from './components/home/navbar/navbar.component';
 import { NavItemComponent } from './components/home/navbar/nav-item/nav-item.component';
 import { LogComponent } from './components/home/log/log.component';
 import { ListarlogComponent } from './components/home/log/listarlog/listarlog.component';
+import { EdiComponent } from './components/home/edi/edi.component';
+import { ModalComponent } from './components/shared/modal/modal.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -39,7 +41,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     NavbarComponent,
     NavItemComponent,
     LogComponent,
-    ListarlogComponent
+    ListarlogComponent,
+    EdiComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,

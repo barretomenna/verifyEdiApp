@@ -1,4 +1,4 @@
-<div class="main-container">
+<div class="col-md-12 main-container">
   <form class="formulario">
 
     <div class="item-container">
@@ -14,5 +14,14 @@
     <input type="button" class="button btn btn-info" value=" Buscar ">
   </form>
 
-  <app-listarlog></app-listarlog>
+  <div class="filtro-container">
+    <label for="Filtro"> Filtro </label>
+    <input type="text" id="Filtro" class="form-control">
+  </div>
+
+  <app-listarlog (showModal)="openModal($event)"></app-listarlog>
+
+  <app-modal [show]="showModal" (closeModal)="closeModal()">
+
+  </app-modal>
 </div>

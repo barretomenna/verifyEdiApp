@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import Log from '../../../../entidades/log';
 
 @Component({
   selector: 'app-listarlog',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListarlogComponent implements OnInit {
 
+  log: Log;
+  @Output() showModal: EventEmitter<Log> = new EventEmitter();
+
   constructor() { }
 
   ngOnInit() {
   }
+
+  openModal(item: Log) {
+    this.showModal.emit(item);
+  }
+
 
 }

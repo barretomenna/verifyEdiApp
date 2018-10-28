@@ -1,3 +1,12 @@
 .table-container {
   margin-top: 15px;
 }
+
+.table-item {
+  cursor: pointer;
+
+  &:hover {
+    background: gray;
+    color: white;
+  }
+}

@@ -1,10 +1,5 @@
 .main-container {
-  display: flex;
-  flex-direction: column;
-  width: 90vw;
   min-width: 600px;
-  margin-left: 5px;
-  padding: 0 5px;
 
   .formulario {
     display: flex;
@@ -21,5 +16,9 @@
       height: 38px;
       width: 120px;
     }
+  }
+
+  .filtro-container {
+    margin-top: 20px;
   }
 }

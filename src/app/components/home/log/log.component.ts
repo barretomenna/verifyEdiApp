@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LogComponent implements OnInit {
 
+  showModal = false;
   constructor() { }
 
   ngOnInit() {
+  }
+
+  openModal(event) {
+    console.log('oi');
+    this.showModal = true;
+  }
+
+  closeModal(event) {
+    this.showModal = event;
   }
 
 }

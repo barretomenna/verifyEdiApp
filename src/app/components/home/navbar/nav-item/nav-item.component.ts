@@ -8,6 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class NavItemComponent implements OnInit {
 
   @Input() itemText: string;
+  @Input() goTo: string;
 
   constructor() { }
 
