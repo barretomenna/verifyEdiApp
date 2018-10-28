@@ -1,0 +1,20 @@
+<div class="detail-container">
+
+  <div class="detail-item">
+    <label> Arquivo </label>
+    <input type="text" [value]="log.arquivo" class="form-control" readonly>
+  </div>
+
+  <div class="detail-item">
+    <label> Data Registro </label>
+    <input type="text" [value]="log.dh_registro | formatData:log.dh_registro" class="form-control" readonly>
+  </div>
+  <div class="detail-item">
+    <label> StackTrace </label>
+    <textarea cols="15" [value]="log.stacktrace" class="arquivo" rows="6" class="form-control" readonly></textarea>
+  </div>
+
+  <div class="detail-item">
+    <input type="button" class="col-md-12 btn btn-success" value=" Confirmar " (click)="close()">
+  </div>
+</div>

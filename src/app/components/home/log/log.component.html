@@ -16,12 +16,12 @@
 
   <div class="filtro-container">
     <label for="Filtro"> Filtro </label>
-    <input type="text" id="Filtro" class="form-control">
+    <input type="text" id="Filtro" class="form-control" [(ngModel)]="searchTerm">
   </div>
 
-  <app-listarlog (showModal)="openModal($event)"></app-listarlog>
+  <app-listarlog (showModal)="openModal($event)" [logs]="logs" [searchTerm]="searchTerm"></app-listarlog>
 
-  <app-modal [show]="showModal" (closeModal)="closeModal()">
-
+  <app-modal [show]="showModal">
+    <app-log-detail (closeModal)="closeModal($event)" [log]="selectedLog"></app-log-detail>
   </app-modal>
 </div>

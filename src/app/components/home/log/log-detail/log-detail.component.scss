@@ -1,0 +1,16 @@
+.detail-container {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+  min-width: 400px;
+
+  .detail-item {
+    padding: 15px 8px;
+  }
+}
+
+textarea {
+  resize: none;
+}

@@ -1,18 +1,16 @@
 <table class="table col-md-12 table-container">
   <thead class="thead-dark">
     <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Arquivo</th>
+      <th scope="col">StackTrace</th>
+      <th scope="col">Data Registro</th>
     </tr>
   </thead>
   <tbody>
-    <tr (click)="openModal()" class="table-item">
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+    <tr (click)="openModal(log)" class="table-item" *ngFor="let log of logs | filter: searchTerm">
+      <td>{{log.arquivo}}</td>
+      <td>{{log.stacktrace}}</td>
+      <td>{{log.dh_registro | formatData:log.dh_registro}}</td>
     </tr>
   </tbody>
 </table>

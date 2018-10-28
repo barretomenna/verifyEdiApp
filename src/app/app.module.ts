@@ -26,6 +26,9 @@ import { LogComponent } from './components/home/log/log.component';
 import { ListarlogComponent } from './components/home/log/listarlog/listarlog.component';
 import { EdiComponent } from './components/home/edi/edi.component';
 import { ModalComponent } from './components/shared/modal/modal.component';
+import { LogDetailComponent } from './components/home/log/log-detail/log-detail.component';
+import { FilterPipe } from './components/shared/filter/filter.pipe';
+import { FormatDataPipe } from './components/shared/formatData/format-data.pipe';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -43,7 +46,10 @@ export function HttpLoaderFactory(http: HttpClient) {
     LogComponent,
     ListarlogComponent,
     EdiComponent,
-    ModalComponent
+    ModalComponent,
+    LogDetailComponent,
+    FilterPipe,
+    FormatDataPipe
   ],
   imports: [
     BrowserModule,
