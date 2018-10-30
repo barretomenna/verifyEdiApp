@@ -1,11 +1,35 @@
 <div class="col-md-12 main-container">
   <div class="input-container">
-    <label for="inputPath"> insira o caminho dos arquivos EDI a serem verificados</label>
-    <input type="text" id="inputPath" class="form-control">
-    <input type="button" class="run-button btn btn-info" value=" Verificar ">
+    <div class="header-input-container">
+      <label for="inputPath"> insira o caminho dos arquivos EDI a serem verificados</label>
+      <span [ngClass]="{'status-server': true,'text-white':true, 'bg-info' : statusServer, 'bg-danger':!statusServer}">
+        {{statusServer ? 'Online' : 'Offline clique para tentar reconectar'}}
+      </span>
+    </div>
+    <input type="text" id="inputPath" class="form-control" [(ngModel)]="path">
+    <input type="button" class="run-button btn btn-info" value=" Buscar Arquivos " (click)="searchFiles()">
   </div>
   <div class="status-container">
-    <legend> status do processo </legend>
+
+    <div class="status-header">
+      <legend> status do processo </legend>
+      <div [ngClass]="{'status': true,'text-white':true, 'bg-info' : !Checking, 'bg-danger':Checking}">
+        {{Checking ? 'Rodando' : 'Parado'}}
+      </div>
+    </div>
+
     <hr>
+
+    <div class="arquivosParaRodar">
+      <label class="file-title"> Arquivos para rodar : </label>
+      <label *ngFor="let name of files" class="file">
+        {{name}} <span *ngIf="this.files.length > 1">,</span>
+      </label>
+    </div>
+
+    <input type="button" class="btn btn-success" value=" Iniciar Verificação " (click)="startVerify()" *ngIf="haveFiles">
+
+    <app-show-progress [show]="showProgress" [logs]="logs"></app-show-progress>
+
   </div>
 </div>

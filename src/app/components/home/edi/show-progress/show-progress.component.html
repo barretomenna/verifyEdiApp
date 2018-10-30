@@ -1,0 +1,14 @@
+<table class="table table-sm col-md-12 table-container" *ngIf="true">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Arquivo</th>
+      <th scope="col">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let log of logs">
+      <td>{{log.arquivo}}</td>
+      <td>{{log.status}}</td>
+    </tr>
+  </tbody>
+</table>

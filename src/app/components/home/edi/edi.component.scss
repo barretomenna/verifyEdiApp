@@ -4,8 +4,68 @@
     margin-top: 10px;
   }
 
-  .status-container {
-    margin-top: 20px;
+  .input-container {
+
+    .header-input-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+
+      .status-server {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 6px 12px;
+        border-radius: 5px;
+      }
+    }
   }
 
+  .status-container {
+    margin-top: 20px;
+
+    .status-header {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+
+  }
+
+  .status {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 5px 15px;
+    width: 100px;
+    border-radius: 5px;
+    user-select: none;
+  }
+
+  .arquivosParaRodar {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    flex-wrap: wrap;
+
+    .file-title {
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .file {
+      margin-left: 5px;
+    }
+  }
+
+  .progresso {
+    display: flex;
+  }
+
+}
+
+legend {
+  width: 220px;
 }

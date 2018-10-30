@@ -4,6 +4,7 @@ import '../polyfills';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 
@@ -29,6 +30,7 @@ import { ModalComponent } from './components/shared/modal/modal.component';
 import { LogDetailComponent } from './components/home/log/log-detail/log-detail.component';
 import { FilterPipe } from './components/shared/filter/filter.pipe';
 import { FormatDataPipe } from './components/shared/formatData/format-data.pipe';
+import { ShowProgressComponent } from './components/home/edi/show-progress/show-progress.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -49,11 +51,13 @@ export function HttpLoaderFactory(http: HttpClient) {
     ModalComponent,
     LogDetailComponent,
     FilterPipe,
-    FormatDataPipe
+    FormatDataPipe,
+    ShowProgressComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    HttpModule,
     HttpClientModule,
     AppRoutingModule,
     TranslateModule.forRoot({

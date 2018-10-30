@@ -1,4 +1,5 @@
 export const AppConfig = {
   production: false,
-  environment: 'LOCAL'
+  environment: 'LOCAL',
+  baseUrl: 'http://localhost:5000/api'
 };

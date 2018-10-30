@@ -11,6 +11,7 @@ export class LogComponent implements OnInit {
   showModal = false;
   logs = new Array<Log>();
   selectedLog: Log;
+  searchTerm: string;
   constructor() { }
 
   ngOnInit() {
