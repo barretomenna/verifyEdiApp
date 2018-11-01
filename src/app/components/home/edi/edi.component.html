@@ -2,9 +2,10 @@
   <div class="input-container">
     <div class="header-input-container">
       <label for="inputPath"> insira o caminho dos arquivos EDI a serem verificados</label>
-      <span [ngClass]="{'status-server': true,'text-white':true, 'bg-info' : statusServer, 'bg-danger':!statusServer}">
+      <button [ngClass]="{'btn': true,'text-white':true, 'btn-info' : statusServer, 'btn-danger':!statusServer}"
+        (click)="reconect()" [disabled]="statusServer">
         {{statusServer ? 'Online' : 'Offline clique para tentar reconectar'}}
-      </span>
+      </button>
     </div>
     <input type="text" id="inputPath" class="form-control" [(ngModel)]="path">
     <input type="button" class="run-button btn btn-info" value=" Buscar Arquivos " (click)="searchFiles()">
