@@ -22,7 +22,7 @@ export class PaginationComponent implements OnInit {
 
   ngOnInit() {
     this.firtPosition = 1;
-    this.lastPosition = 9;
+    this.lastPosition = 10;
     this.maxItens = 10;
     this.actualPosition = 1;
     this.pagination(this.maxItens);
@@ -44,6 +44,10 @@ export class PaginationComponent implements OnInit {
   }
 
   goTo(pagina: number) {
+
+    if (this.actualPosition === pagina) {
+      return;
+    }
 
     this.actualPosition = pagina;
 
