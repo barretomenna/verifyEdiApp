@@ -31,6 +31,7 @@ import { LogDetailComponent } from './components/home/log/log-detail/log-detail.
 import { FilterPipe } from './components/shared/filter/filter.pipe';
 import { FormatDataPipe } from './components/shared/formatData/format-data.pipe';
 import { ShowProgressComponent } from './components/home/edi/show-progress/show-progress.component';
+import { PaginationComponent } from './components/shared/pagination/pagination.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -52,7 +53,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     LogDetailComponent,
     FilterPipe,
     FormatDataPipe,
-    ShowProgressComponent
+    ShowProgressComponent,
+    PaginationComponent
   ],
   imports: [
     BrowserModule,

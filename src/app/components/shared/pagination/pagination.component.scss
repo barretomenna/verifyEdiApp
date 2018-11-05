@@ -1,0 +1,17 @@
+.previous {
+  border-radius: 5px 0 0 5px;
+}
+
+.next {
+  border-radius: 0 5px 5px 0;
+}
+
+.page-item {
+  user-select: none;
+}
+
+.active {
+  background: #00B8D4;
+  color: white;
+  border: 1px solid white;
+}

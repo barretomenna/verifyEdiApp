@@ -9,6 +9,7 @@ export class NavItemComponent implements OnInit {
 
   @Input() itemText: string;
   @Input() goTo: string;
+  isActive: boolean;
 
   constructor() { }
 

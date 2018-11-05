@@ -13,8 +13,8 @@ const routes: Routes = [
         children: [
             { path: 'edi', component: EdiComponent },
             { path: 'log', component: LogComponent },
-            { path: '', redirectTo: 'edi', pathMatch: 'full' },
-            { path: '**', redirectTo: 'edi', pathMatch: 'full' }
+            { path: '', component: EdiComponent },
+            { path: '**', component: EdiComponent }
         ]
     }
 ];
